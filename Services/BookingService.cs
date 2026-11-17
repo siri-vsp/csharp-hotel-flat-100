@@ -57,5 +57,10 @@ namespace FlatHotel.Services
         {
             return _reservations.Sum(r => r.Total());
         }
+
+        public int BookedCount()
+        {
+            return _rooms.Count(r => r.Booked);
+        }
     }
 }
